@@ -146,7 +146,7 @@ def Extract_data(channel_ids):
 
 
 
-client = MongoClient("mongodb+srv://akshaydeep:Akshay%40123@cluster0.eakgqrw.mongodb.net/YoutubeDb?retryWrites=true&w=majority")
+client = MongoClient("")
 mongodb = client["YoutubeDb"]
 collection = mongodb["channelData"]
 
@@ -154,8 +154,8 @@ collection = mongodb["channelData"]
 connect = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="Akshay@123",
-    database="yt_db"
+    password="",
+    database=""
 )
 cursor = connect.cursor()
 
@@ -221,14 +221,14 @@ cursor.execute(comment_table_query)
 
 def Export_to_mysql():
 
-    client = MongoClient("mongodb+srv://akshaydeep:Akshay%40123@cluster0.eakgqrw.mongodb.net/YoutubeDb?retryWrites=true&w=majority")
+    client = MongoClient("")
     mongodb = client["YoutubeDb"]
     collection = mongodb["channelData"]
 
     connect = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Akshay@123",
+        password="",
         database="yt_db")
     cursor = connect.cursor()
     # Retrieve channel data and insert into channel table
