@@ -362,7 +362,7 @@ def main():
         connect = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Akshay@123",
+            password="",
             database="yt_db"
         )
         cursor = connect.cursor()
